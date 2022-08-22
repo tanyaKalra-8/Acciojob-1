@@ -1,0 +1,34 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc = new Scanner (System.in);
+      String s= sc.next();
+      String hr= s.substring(0,2);
+      String min= s.substring(3,5);
+      String sec=s.substring(6,8);
+        if(s.charAt(8)=='A'){
+          if(hr.equals("12")){
+            hr="00";
+          }
+          String military="";
+          military= hr + ":" + min + ":" + sec;
+          System.out.print(military);
+        }
+        else{
+          if(!hr.equals("12")){
+            int h= Integer.parseInt(hr);
+            h+=12;
+            hr=Integer.toString(h);
+          }
+          String military="";
+          military= hr + ":" + min + ":" + sec;
+          System.out.print(military);
+        }
+      }
+}
