@@ -1,0 +1,37 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc = new Scanner (System.in);
+      long n = sc.nextLong();
+      long r = sc.nextLong();
+      long sub = (n-r);
+      long up=1;
+      long dn=1;
+      long s=1;
+      // nCr= n!/[r!(n-r)!]
+      for(long i=n;i>0;i--){
+        up*=i; 
+      } 
+      for(long i=r;i>0;i--){
+        dn*=i; 
+      } 
+      for(long i=(n-r);i>0;i--){
+        s*=i;
+	}
+      long ans= (long)up/(long)(dn*s);
+      System.out.println(ans);
+}
+    // public static int fact(int n){
+    //   int ans=1;
+    //   while(n>0){
+    //     ans*=n;
+    //     n--;
+    //   }
+    // }
+}
