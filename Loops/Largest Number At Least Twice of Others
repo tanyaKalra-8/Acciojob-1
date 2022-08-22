@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for(int i=0;i<n;i++){
+          arr[i]= sc.nextInt();
+        }
+        int index =0;
+      int ans = -1;
+      for(int i=1;i<n;i++){
+        if(arr[i]>arr[index]){
+          index = i;
+        }  
+        }
+      for(int i=0;i<n;i++){
+        if(index!=i && arr[index]< 2* arr[i]){
+          ans =-1;
+          break;  
+        }
+        else{
+            ans= index;  
+        }
+      }
+      System.out.println(ans);
+	}
+}
