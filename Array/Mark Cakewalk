@@ -1,0 +1,24 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        int [] cal = new int [n];
+        for(int i=0;i<n;i++){
+          cal[i]= sc.nextInt();
+        }
+      Arrays.sort(cal);
+      long m =0;
+      long t=1;
+        for(int i=n-1;i>=0;i--){
+          m+=t*cal[i];
+          t=t*2;
+      }
+      System.out.println(m);
+      }
+}
