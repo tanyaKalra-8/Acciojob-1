@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc = new Scanner (System.in);
+      int n = sc.nextInt();
+      int arr[]= new int[n];
+      for(int i=0;i<n;i++){
+        arr[i]=sc.nextInt();
+      }
+      int brr[]= new int[n];
+      int pivot = arr[0];
+      int j=0;
+      int freq = 1;
+      for(int i=1;i<n;i++){
+        if(arr[i]<pivot){
+          brr[j++]=arr[i];
+        }
+        if(arr[i]==pivot){
+          freq++;
+        }
+      }
+       while(freq-->0){
+          brr[j++]=pivot;
+        }
+      for(int i=1;i<n;i++){
+        if(arr[i]>pivot){
+          brr[j++]=arr[i];
+        }
+      }
+      for(int i=0;i<n;i++){
+        System.out.print(brr[i] + " ");
+      }
+	}
+}
