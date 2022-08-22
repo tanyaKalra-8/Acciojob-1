@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static int funct(String str, int i, int n){
+      if(i==n-2){
+        return 0;
+      }
+      String c = str.substring(i,i+3);
+      if(c.equals("abc") || c.equals("aba")){
+        return 1 + funct(str,i+1,n);
+      }
+      return funct(str,i+1,n);
+    }
+    public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc = new Scanner (System.in);
+      String str = sc.next();
+      int n = str.length();
+      System.out.println(funct(str,0,n));
+	}
+}
