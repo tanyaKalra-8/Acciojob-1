@@ -1,0 +1,24 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner (System.in);
+        int A = sc.nextInt();
+        int [] arr = new int[A];
+        for(int i=0;i<A;i++){
+          arr [i] = sc.nextInt();
+        }
+        int B = sc.nextInt();
+        for (int i=0;i<A;i++){
+          if(B<=arr[i]){
+            System.out.println(i);
+            return;
+          }
+          }
+      System.out.println(A);
+      }
+}
