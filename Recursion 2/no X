@@ -1,0 +1,23 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc = new Scanner (System.in);
+      String s = sc.next();
+      System.out.print(funct(s,0,s.length()));
+	}
+    public static String funct(String s, int i, int n){
+      if(i==n){
+        return " ";
+      }
+      if(s.charAt(i) == 'x'){
+        return funct(s, i+1, n);
+      }
+        return s.charAt(i)+ funct(s, i+1, n);
+    }
+}
