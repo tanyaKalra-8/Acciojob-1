@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc = new Scanner (System.in);
+      int n = sc.nextInt();
+      int d = sc.nextInt();
+      int count=0;
+      for(int i=n;i>0;i=i/10){
+        int k = i%10;
+        if(k==d){
+          count++;
+        }
+      }
+      System.out.println(count);
+	}
+}
